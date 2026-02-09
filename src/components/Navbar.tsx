@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const TELEGRAM_LINK = 'https://t.me/studysphere_placeholder';
+const BASE_PATH = '/StudySphere';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link href="/" className="navbar-logo">
-          <Image src="/logo.jpg" alt="StudySphere" width={42} height={42} />
+          <img src={`${BASE_PATH}/logo.jpg`} alt="StudySphere" width={42} height={42} style={{ borderRadius: '50%' }} />
           <span>StudySphere</span>
         </Link>
 

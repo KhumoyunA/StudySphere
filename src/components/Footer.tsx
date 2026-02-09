@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 const TELEGRAM_LINK = 'https://t.me/studysphere_placeholder';
+const BASE_PATH = '/StudySphere';
 
 const socialLinks = [
     {
@@ -42,7 +42,7 @@ export default function Footer() {
                 <div className="footer-main">
                     <div className="footer-brand">
                         <Link href="/" className="footer-logo">
-                            <Image src="/logo.jpg" alt="StudySphere" width={36} height={36} />
+                            <img src={`${BASE_PATH}/logo.jpg`} alt="StudySphere" width={36} height={36} style={{ borderRadius: '50%' }} />
                             <span>StudySphere</span>
                         </Link>
                         <p className="footer-description">
